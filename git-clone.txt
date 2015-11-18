@@ -1,3 +1,5 @@
 clone
 git clone 
 ใช้copy repository
+
+git clone ตามด้วย SSH clone URL  (ใช้สำหรับการ clone folder ลงมาทั้ง folder)
