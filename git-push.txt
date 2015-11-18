@@ -13,3 +13,5 @@ git push origin master >> เป็นการนำไฟล์ที่เร
 >คือการส่งข้อมูลขึ้นไปบน server ที่เรา set ไว้
 
 push >> เป็นการอัพไฟลขึ้นไปบน github
+
+>>git push -u origin master เป็นการดึงข้อมูลจากmaster ไปไว้ในorigin
