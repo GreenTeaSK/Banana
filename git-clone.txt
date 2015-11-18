@@ -1,5 +1,6 @@
-clone
+﻿clone
 git clone 
-��copy repository
+ใช้copy repository
 
-git clone ������� SSH clone URL  (������Ѻ��� clone folder ŧ�ҷ�� folder)
+git clone ตามด้วย SSH clone URL  (ใช้สำหรับการ clone folder ลงมาทั้ง folder)
+>>git clone คือการ colone file ที่อยู่บน server ลงมายังเครื่องของเรา
