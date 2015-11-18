@@ -1,1 +1,2 @@
 push
+git push origin master >> เป็นการนำไฟล์ที่เราทำการแก้ไขแล้วอัพขึ้นไปที่ server กลาง
