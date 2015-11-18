@@ -7,3 +7,5 @@ Commit by peun
 git commit -m "comment" บอกว่าเราแก้ไขอะไรใน file บ้าง
 
 
+
+--การเอาไฟล์ไปเก็บใน repository
