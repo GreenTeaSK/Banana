@@ -6,3 +6,5 @@ Commit by peun
 
 git commit -m "comment" เป็นการบอกว่า file ที่เราสร้าง ทำงานอย่างไร หรือ เราแก้ตรงไหนของ file
 
+
+--การเอาไฟล์ไปเก็บใน repository
