@@ -1,0 +1,96 @@
+﻿1. git config —global
+ใช้แค่ครั้งเดียว
+git config —global user.name “ชื่อที่เราจะตั้ง” กำหนดชื่อผู้ใช้งาน 
+git config —global user.email " ระบุemail" กำหนด email ของผู้ใช้งาน 
+ตัวอย่างคำสั่ง
+-git config --global user.name "Kwangkuku"
+-git config --global user.email "Kwang@hotmail.com"
+
+2. git init
+git init (ใช้ได้ครั้งเดียว/Folder)
+เป็นคำสั่งเริ่มต้นใช้งาน git มาควบคุมเวอร์ชั่นของ files และ folders ในตำแหน่งที่อยู่ปัจจุบัน
+โดยจะสร้าง folder .git ขึ้นมาซึ่งเป็น hidden folder ซึ่ง folder นี้จะเก็บข้อมูลต่างๆ ของ git repository ไว้
+ตัวอย่างคำสั่ง
+- git init
+
+3. git add
+เป็นคำสั่งในการเพิ่ม files หรือ folders ที่สร้างขึ้นมาใหม่เข้าไปยัง git repository ***ใช้ตลอดชีวิต***
+ตัวอย่าง คำสั่ง
+- git add hello.txt 
+
+4. git status
+เป็นคำสั่งในการเช็คสถานะปัจจุบันของการทำงาน ว่ามีอะไรเกิดขึ้นบ้าง และยังมี file ใดที่ยังไม่ได้ยืนยันสถานะ (add) เป็นสีแดง ถ้าเรียบร้อยแล้วจะเป็นสีเขียว
+หรือยังไม่ได้มีการ commit
+ตัวอย่าง คำสั่ง
+-git status
+
+5. git commit
+git commit : เอาไฟล์เข้าไปเก็บใน reppository เขียนข้อความว่าทำอะไรไปบ้าง
+ตัวอย่าง คำสั่ง
+- git commit -m "EDITED file"
+
+6. git log
+ เป็นคำสั่งไว้สำหรับ ดู log file ที่เราได้สร้าง และ commit แล้ว เพื่อจะให้เราสามารถจะย้อนกลับการทำงานได้ในกรณีที่เกิดปัญหา
+ ในกรณีเกิดปัญหา ต้องการย้อนกลับ ให้ใช้ id 7 หลักแรก ของ process นั้น ๆ (โหมด เพื่อความสบายใจ)
+ตัวอย่าง คำสั่ง
+– git log
+
+7. git remote
+เข้ามาให้ git ที่เครื่องเรารู้จัก
+เป็นคำสั่งใช้สำหรับการเพิ่ม remote repository ขึ้นมาชื่อว่า origin เพื่อนำมาใช้งานต่อไป
+ตัวอย่าง คำสั่ง
+- git remot­e add origi­n git@g­ithub.com:/try_gi­t.git
+
+8. git pull
+git pull origin master (โหมด ใช้งานตลอด)
+เป็นคำสั่งที่ใช้ในการอัพเดตของใหม่ที่คนในทีมอัพเดตโดยเพื่อให้ข้อมูลเป็น version เดียวกัน
+เป็นการดึงข้อมูลจาก origin มาไว้ที่ master
+คำสั่ง pull ใช้เพื่อ อัพเดทไฟล์จากของเพื่อนให้เหมือนกันก่อน
+git pull ไว้โหลดไฟล์จาก githubมาไว้ในเครื่อง
+git pull คือ การดึงไฟล์ จาก githup มาทำงานเพื่อแก้ไขหรือเปลี่ยนแปลงต่อไป
+ตัวอย่างคำสั่ง
+- git pull origin master
+
+9. git push
+ เป็นคำสั่งส่ง files และ folders จาก repository ที่ทำการ commit ไว้ ไปยัง remote repository หรือ github.com (โหมด ใช้งานตลอด)
+ตัวอย่าง คำสั่ง
+– git push origin master
+
+10. git clone
+ git clone : เป็นการนำโปรเจคจาก repository ใน github ของเพื่อนลงมาเก็บไว้ในเครื่องของเรา (local)
+ ตามด้วย url ที่เอามาจาก github ที่ ssh (Secure Shell)
+ตัวอย่าง คำสั่ง
+- git clone git@github.com:GreenTeaSK/Banana.git
+
+11. git checkout
+git checkout ตามด้วยชื่อ file หรือ commit number
+เป็นคำสั่งที่ใช้ในการยกเลิกงานที่เราทำในไฟล์นั้นๆ โดยที่ไฟล์นั้นยังไม่ถูกกด add
+ตัวอย่างคำสั่ง
+- ต้องการยกเลิกการแก้ไขของไฟล์ที่ชื่อว่า psu.txt
+  git checkout psu.txt หรือ git checkout d3bc2ff0
+
+12. git reset
+การเคลื่อนที่ไปหา commit นั้นๆ โดยการใช้ commitID หรือว่าจะใช้ HEAD^
+^ 1ครั้งคือการถอยหลัง1ครั้ง
+^^คือการถอยหลัง2ครั้ง
+ตัวอย่างคำสั่ง
+- git reset HEAD^ หรือ git reset 5ccf531
+
+13. git mv
+ git mv คือ การเปลี่ยนชื่อไฟล์
+ โดยใช้คำสั่ง : git mv ตามด้วยชื่อไฟล์ที่อยากเปลี่ยนชื่อ ต่อด้วยชื่อที่อยากเปลี่ยน
+ตัวอย่าง คำสั่ง
+- git mv hello.txt hello2.txt
+
+14. git diff/ignore
+git-ignore ไม่ต้องการไฟล์ประเภทไหน ชื่ออะไร Folder ชื่ออะไร เข้ามาเก็บไว้ใน git เป็นการยกเเว้นไฟล์ที่ไม่ต้องการ
+ตัวอย่าง คำสั่ง
+- สร้างไฟล์ .ignore ภายในใส่สิ่งที่ไม่ต้องการไว้
+git-diff บอกสถานะปัจจุบัน กับไฟล์ที่แก้ไขไป มีอะไรที่ไม่เหมือนกันบ้าง
+ตัวอย่าง คำสั่ง
+- git diff
+
+15. git rm
+ git rm คือ การลบไฟล์ใน unix ลบไฟล์ออกจาก git
+ตัวอย่าง คำสั่ง
+- git rm hello.txt
